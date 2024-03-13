@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const LogIn = () => {
-  // Your LogIn component code here
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [password, setPassword] = useState('');
+  const [isPasswordValid, setIsPasswordValid] = useState(false);
+
+  const desiredPassword = 'ZUOLP-1232-SD';
+
+  const handlePasswordChange = (event) => {
+    event.preventDefault();
+
+    const inputPassword = event.target.value;
+    setPassword(inputPassword);
+    setIsPasswordValid(inputPassword === desiredPassword);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(isPasswordValid);
+  };
+
+ 
+
   return (
     <section>
       <div className="overflow-hidden bg-white py-24 sm:py-32">
@@ -14,37 +35,41 @@ const LogIn = () => {
                   <span className='ml-2 text-indigo-600'>priority tasks</span>
                 </p>
 
-                <form>
-                  <div class="space-y-12">
-                    <div class="border-b border-gray-900/10 pb-12">
-                      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                        <div class="sm:col-span-3">
-                          <label for="first-name" class="block text-sm font-medium leading-6 text-indigo-600">First name</label>
-                          <div class="mt-2">
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 hadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2 color-[#000]" />
+                <form onSubmit={handleSubmit}>
+                  <div className="space-y-12">
+                    <div className="border-b border-gray-900/10 pb-12">
+                      <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        <div className="sm:col-span-3">
+                          <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-indigo-600">First name</label>
+                          <div className="mt-2">
+                            <input type="text" name="first-name" id="first-name" autoComplete="given-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2 color-[#000]" />
                           </div>
                         </div>
 
-                        <div class="sm:col-span-3">
-                          <label for="last-name" class="block text-sm font-medium leading-6 text-indigo-600">Last name</label>
-                          <div class="mt-2">
-                            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                        <div className="sm:col-span-3">
+                          <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-indigo-600">Last name</label>
+                          <div className="mt-2">
+                            <input type="text" name="last-name" id="last-name" autoComplete="family-name" value={lastName} onChange={(e) => setLastName(e.target.value)} className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                           </div>
                         </div>
 
-                        <div class="col-span-full">
-                          <label for="street-address" class="block text-sm font-medium leading-6 text-indigo-600">Street address</label>
-                          <div class="mt-2">
-                            <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 bg-[#e5e5e5] ring-inset ring-gray-300 text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                        <div className="col-span-full">
+                          <label htmlFor="street-password" className="block text-sm font-medium leading-6 text-indigo-600">Password</label>
+                          <div className="mt-2">
+                            <input type="password" name="street-password" id="street-password" autoComplete="street-password" value={password} onChange={handlePasswordChange} className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 bg-[#e5e5e5] ring-inset ring-gray-300 text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="mt-6 flex items-center justify-end gap-x-6">
-                    <button type="button" class="text-sm font-semibold leading-6 text-gray-600 lg:max-w-none">Cancel</button>
-                    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Log in</button>
+                  <div className="mt-6 flex items-center justify-end gap-x-6">
+                    <button type="button" className="text-sm font-semibold leading-6 text-gray-600 lg:max-w-none" disabled={!isPasswordValid}>
+                      Cancel
+                    </button>
+                    <button type="submit" className={`rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm focus:outline-none focus:ring focus:border-indigo-600 ${isPasswordValid ? 'bg-indigo-600 hover:bg-indigo-500' : 'bg-gray-300 cursor-not-allowed'}`} disabled={!isPasswordValid}>
+                      Log in
+                    </button>
                   </div>
                 </form>
               </div>
