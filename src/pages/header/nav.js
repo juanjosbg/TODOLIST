@@ -44,6 +44,13 @@ export default function index() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Task List
+          </a>
+
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Activities
+          </a>
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
               Events
@@ -82,13 +89,6 @@ export default function index() {
               </Popover.Panel>
             </Transition>
           </Popover>
-
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Task List
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Xxxx
-          </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="/" className="text-sm font-semibold leading-6 text-gray-900">
@@ -136,8 +136,9 @@ export default function index() {
                 <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   Task List
                 </a>
+                
                 <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  Xxxx
+                  Activities
                 </a>
               </div>
               <div className="py-6">

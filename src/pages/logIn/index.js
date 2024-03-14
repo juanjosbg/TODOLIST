@@ -36,7 +36,7 @@ const LogIn = () => {
 
     // Si la contraseña es válida, redirigir al usuario a otra sección
     if (isPasswordValid) {
-      router.push('../taskList/');
+      router.push('../home/');
     }
   };
 
