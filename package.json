@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
     "@react-icons/all-files": "^4.1.0",
     "daisyui": "^4.7.3",
     "ldrs": "^1.0.1",

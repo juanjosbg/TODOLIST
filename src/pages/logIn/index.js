@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import Task from '../taskList/index.js';
-
 const LoadingScreen = () => (
   <div className="fixed top-0 left-0 z-50 w-screen h-screen flex justify-center items-center bg-gray-200 opacity-75">
     <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
@@ -151,8 +149,6 @@ const LogIn = () => {
           </div>
         </div>
       </div>
-
-      <Task />
     </section>
   );
 };
