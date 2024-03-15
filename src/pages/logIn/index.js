@@ -27,16 +27,17 @@ const LogIn = () => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsLoading(true);
-    console.log(isPasswordValid);
+    if (firstName !== '' && lastName !== '') {
+      event.preventDefault();
+      setIsLoading(true);
+      console.log(isPasswordValid);
 
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulación de 2 segundos de carga
-    setIsLoading(false);
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulación de 2 segundos de carga
+      setIsLoading(false);
 
-    // Si la contraseña es válida, redirigir al usuario a otra sección
-    if (isPasswordValid) {
-      router.push('../home/');
+      if (isPasswordValid) {
+        router.push('../home/');
+      }
     }
   };
 
