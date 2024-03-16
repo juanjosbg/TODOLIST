@@ -26,8 +26,9 @@ export default function Home() {
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
               <div className="text-center">
                 <h1 className="text-5xl font-bold tracking-tight text-gray-900 uppercase sm:text-6xl ">priority tasks</h1>
-                <p className="mt-6 text-lg leading-8 text-gray-600">
-                  <span className="">Priority Tasks</span> es tu aliado para una gestión de tareas efectiva. Optimiza tu tiempo identificando y destacando las tareas más importantes. Con funciones intuitivas y herramientas de planificación, esta aplicación te ayuda a abordar tus pendientes de manera organizada, permitiéndote enfocarte en lo que realmente importa. Haz de tu jornada un camino más eficiente con Priority Tasks
+                <p className="mt-6 text-lg leading-8 text-gray-600 text-justify">
+                  <span className="underline">Priority Tasks</span> es tu aliado para una gestión de tareas efectiva.
+                  Optimiza tu tiempo identificando y destacando las tareas más importantes. Con funciones intuitivas y herramientas de planificación, esta aplicación te ayuda a abordar tus pendientes de manera organizada, permitiéndote enfocarte en lo que realmente importa. Haz de tu jornada un camino más eficiente con Priority Tasks
                 </p>
               </div>
             </div>
