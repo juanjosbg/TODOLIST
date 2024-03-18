@@ -11,14 +11,13 @@ const todoList = () => {
                             <th></th>
                             <th>Name</th>
                             <th>Job</th>
-                            <th>Favorite Color</th>
                         </tr>
                     </thead>
                     <tbody>
                         {/* row 1 */}
                         <tr>
                             <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
+                            <td>Blue</td>
                         </tr>
                     </tbody>
                 </table>
