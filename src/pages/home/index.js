@@ -1,5 +1,6 @@
-import Nav from '../header/nav.js'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid';
+import Nav from '../header/nav.js';
+import Footer from '../footer/footer.js';
 
 export default function index() {
   return (
@@ -100,6 +101,8 @@ export default function index() {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </section>
   )
 }
