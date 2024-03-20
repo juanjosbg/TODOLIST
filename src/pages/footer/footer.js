@@ -18,9 +18,10 @@ const Footer = () => {
     return (
         <footer className="bg-slate-50">
             <div className="mx-auto w-full p-4 py-6 lg:py-8 max-w-7xl sm:px-6 lg:px-8 px-5">
-                <div className="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between">
+                <div className="flex w-full flex-row flex-wrap items-center justify-between md:gap-y-6 md:gap-x-2"> 
+                {/* Se elimino esto de aca ^ || justify-center gap-y-6  border-t border-blue-gray-50 py-6 text-center md: */}
                     <div className="mb-6 md:mb-0">
-                        <div className="flex flex-wrap items-center pl-9 gap-y-4 gap-x-14 ml-5">
+                        <div className="flex flex-wrap items-center pl-8 gap-y-2 gap-x-14 ml-5">
                             <div>
                                 <h2 className="mb-6 text-md font-semibold uppercase">Compromiso</h2>
                                 <ul className="">
@@ -43,7 +44,7 @@ const Footer = () => {
                             </div>
 
                             <div>
-                                <h2 className="mb-6 text-md font-semibold uppercase">Recursos</h2>
+                                <h2 className="mb-6 md:mt-[-5vh] text-md font-semibold uppercase">Recursos</h2>
                                 <ul className="">
                                     <li className="mb-2 ">
                                         <a href='' className='flex px-2'>Comunidad <CiCircleInfo className='mt-1 ml-2' /></a>
