@@ -6,8 +6,8 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 
-import RegisterForm from '../register-singup/Register.js';
-import LoginForm from '../register-singup/LoginForm.js'
+import RegisterForm from '../account/Register.js';
+import LoginForm from '../account/LoginForm.js'
 
 const LogIn = () => {
   const data = [
@@ -25,8 +25,8 @@ const LogIn = () => {
 
   return (
     <section>
-      <div className="overflow-hidden bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="overflow-hidden bg-white py-24 sm:py-32 lg:h-[100vh] w-full">
+        <div className="mx-auto max-w-7xl px-6 lg:px-2 md:px-8 lg:mt-15 w-full">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-8 lg:pt-4">
               <div className="lg:max-w-lg">
@@ -64,7 +64,7 @@ const LogIn = () => {
               </div>
             </div>
 
-            <div className="w-100 carousel carousel-center max-w-md p-4 space-x-4 bg-neutral sm:w-[60rem] md:-ml-5 lg:-ml-0 ring-gray-400/10 rounded-box rounded-xl shadow-xl">
+            <div className="w-100 carousel carousel-center max-w-md p-4 space-x-4 bg-neutral sm:w-[60rem] md:-ml-5 lg:-ml-0 ring-gray-400/10 rounded-xl shadow-xl">
               <div className="carousel-item">
                 <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" className="rounded-box" />
               </div>

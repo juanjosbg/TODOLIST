@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import axios from 'axios';
 
 function Register() {
   const [registerUsername, setRegisterUsername] = useState('');
@@ -8,9 +8,28 @@ function Register() {
   const [registerPhone, setRegisterPhone] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
   const [registerTermAndCondition, setRegisterTermAndCondition] = useState(false);
-  
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios({
+      method: "post",
+      data: {
+        username: registerUsername,
+        lastname: registerLastname,
+        email: registerEmail,
+        phone: registerPhone,
+        password: registerPassword,
+        termAndCondition: registerTermAndCondition
+      },
+      withCredentials: true,
+      url: "http://localhost:3001/register",
+    })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <div className="mt-3 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -18,13 +37,14 @@ function Register() {
               <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-indigo-600">First name</label>
               <div className="mt-2">
                 <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 color-[#000] pl-4"
-                  required onChange={e => setRegisterUsername(e.target.value)}
+                  required
+                  onChange={(e) => setRegisterUsername(e.target.value)} // Aquí se añade la función para actualizar el estado
                 />
               </div>
             </div>
 
             <div className="col-span-3">
-              <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-indigo-600">Last name</label>
+              <label className="block text-sm font-medium leading-6 text-indigo-600">Last name</label>
               <div className="mt-2">
                 <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-4"
                   required onChange={e => setRegisterLastname(e.target.value)}
@@ -33,9 +53,9 @@ function Register() {
             </div>
 
             <div className="col-span-4">
-              <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-indigo-600">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium leading-6 text-indigo-600">Email</label>
               <div className="mt-2">
-                <input type="text" name="first-name" id="first-name" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 color-[#000] pl-4"
+                <input name="email" type="email" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 color-[#000] pl-4"
                   required onChange={e => setRegisterEmail(e.target.value)}
                 />
               </div>
@@ -52,10 +72,16 @@ function Register() {
             </div>
 
             <div className="col-span-full">
-              <label htmlFor="street-password" className="block text-sm font-medium leading-6 text-indigo-600">Password</label>
+              <div className="flex items-center justify-between">
+                <label htmlFor="password" className="block text-sm font-medium leading-6 text-indigo-600">Password</label>
+                <div className="text-sm">
+                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+                </div>
+              </div>
+
               <div className="mt-2">
-                <input id="password" type="password" required onChange={e => setRegisterPassword(e.target.value)}
-                  className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-4"
+                <input id="password" name="password" type="password" required onChange={e => setRegisterPassword(e.target.value)}
+                  autoComplete="current-password" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset bg-[#e5e5e5] ring-gray-300 placeholder:text-indigo-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-4"
                 />
               </div>
             </div>
@@ -77,7 +103,10 @@ function Register() {
         <button type="button" className="text-sm font-semibold leading-6 text-gray-600 lg:max-w-none">
           Cancel
         </button>
-        <button type="submit" className={`rounded-md px-3 py-2 text-sm font-semibold  bg-slate-400 text-white shadow-sm focus:outline-none focus:ring focus:border-indigo-600`}>
+        <button type="button" // Cambiar a type="button" para evitar envío automático del formulario
+          className={`rounded-md px-3 py-2 text-sm font-semibold  bg-slate-400 text-white shadow-sm focus:outline-none focus:ring focus:border-indigo-600`}
+          onClick={handleSubmit}
+        >
           Register
         </button>
       </div>

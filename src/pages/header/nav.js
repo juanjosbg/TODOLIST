@@ -12,9 +12,9 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 
 const Events = [
-  { name: 'Concerts', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Makes Trip', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Extreme Sports', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
+  { name: 'Planes', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+  { name: 'Abonos', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'Tareas', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
 ]
 
 function classNames(...classes) {
@@ -44,12 +44,12 @@ export default function index() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <a href="../TaskList/" className="text-sm font-semibold leading-6 text-gray-900">
-            Task List
+          <a href="../recordatorio/" className="text-sm font-semibold leading-6 text-gray-900">
+            Recordatorios
           </a>
 
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Activities
+            Agenda
           </a>
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
@@ -134,11 +134,11 @@ export default function index() {
                   )}
                 </Disclosure>
                 <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  Task List
+                  Recordatorios
                 </a>
                 
                 <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  Activities
+                  Agenda
                 </a>
               </div>
               <div className="py-6">

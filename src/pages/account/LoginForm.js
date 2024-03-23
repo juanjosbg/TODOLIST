@@ -31,7 +31,7 @@ function LoginForm() {
             setIsLoading(true);
             console.log(isPasswordValid);
 
-            await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulación de 2 segundos de carga
+            await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulación de 1 segundos de carga
             setIsLoading(false);
 
             if (isPasswordValid) {

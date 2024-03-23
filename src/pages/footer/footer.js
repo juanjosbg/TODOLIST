@@ -18,8 +18,8 @@ const Footer = () => {
     return (
         <footer className="bg-slate-50">
             <div className="mx-auto w-full p-4 py-6 lg:py-8 max-w-7xl sm:px-6 lg:px-8 px-5">
-                <div className="flex w-full flex-row flex-wrap items-center justify-between md:gap-y-6 md:gap-x-2"> 
-                {/* Se elimino esto de aca ^ || justify-center gap-y-6  border-t border-blue-gray-50 py-6 text-center md: */}
+                <div className="flex w-full flex-row flex-wrap items-center justify-between md:gap-y-6 md:gap-x-2">
+                    {/* Se elimino esto de aca ^ || justify-center gap-y-6  border-t border-blue-gray-50 py-6 text-center md: */}
                     <div className="mb-6 md:mb-0">
                         <div className="flex flex-wrap items-center pl-8 gap-y-2 gap-x-14 ml-5">
                             <div>
@@ -61,14 +61,14 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                    </div>  
+                    </div>
 
                     <div className='mb-6 md:mb-0'>
                         <div className="flex flex-wrap items-center gap-y-4 gap-x-8">
                             <Card className="mt-6 w-96">
                                 <CardHeader color="blue-gray" className="relative h-56">
                                     <img
-                                        src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                                        src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                         alt="card-image"
                                     />
                                 </CardHeader>
@@ -87,13 +87,13 @@ const Footer = () => {
                             <Card className="mt-6 w-96">
                                 <CardHeader color="blue-gray" className="relative h-56">
                                     <img
-                                        src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                                        src="https://images.unsplash.com/photo-1606327054476-256fc9690fe2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                         alt="card-image"
                                     />
                                 </CardHeader>
                                 <CardBody>
                                     <Typography variant="h5" color="blue-gray" className="mb-2">
-                                        UI/UX Review Check
+                                        Business & Work
                                     </Typography>
                                     <Typography>
                                         The place is close to Barceloneta Beach and bus stop just 2 min by

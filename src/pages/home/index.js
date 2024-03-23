@@ -46,7 +46,7 @@ export default function index() {
           <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
             <img
               className="w-[48rem] h-[40rem] max-w-none rounded-xl bg-gray-900 ring-1 ring-gray-400/10 sm:w-[57rem] object-cover shadow-md"
-              src="https://images.unsplash.com/photo-1523289333742-be1143f6b766?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGxhbm5pbmd8ZW58MHx8MHx8fDA%3D"
+              src="https://images.unsplash.com/photo-1529651737248-dad5e287768e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fHBsYW58ZW58MHx8MHx8fDA%3D"
               alt=""
             />
           </div>
